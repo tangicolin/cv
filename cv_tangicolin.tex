@@ -1,0 +1,180 @@
+% Taille de la police du CV et le format
+\documentclass[17pt,a4paper]{cv}
+
+% Un certain nombre de packages sont déjà inclus par la classe CV
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Langue
+\Language{francais}
+
+% Méta-données PDF
+\hypersetup{
+	pdfauthor   = {Tangi COLIN	},		% C'est vous qui avez fait le PDF
+	pdftitle    = {Curriculum Vitae},
+%	pdfsubject  = {},
+%	pdfkeywords = {},
+	pdfcreator  = {PDFLaTeX},						% Vous l'avez fait avec LATeX !
+	pdfproducer = {PDFLaTeX}
+}
+
+% Couleur des liens hypertextes, si vous voulez les faire ressortir
+\definecolor{urlcolor}{rgb}{0, 0, 0.5}
+
+% Version (0 = simple, devrait rentrer sur une page et 1 = détaillé)
+% Par défaut, tout est inclus dans la version simple sauf les cours (\Course{}).
+% Pour n'inclure un élément que dans la version détaillée, ajouter l'argument [\detailedOnly]
+% (cela n'est toutefois pas implémenté partout, votre nom par exemple ne peut pas ne pas figurer dans la version simple)
+\Detailed{0}
+
+% Marges
+\geometry{
+	hmargin=1.1cm,			% Marges gauche-droite
+	vmargin=1.5cm				% Marges haut-bas
+}
+
+% Largeur de la colonne de gauche
+\setlength{\colwidth}{3,2cm}
+
+% Espacements
+\smallskipamount=0.4cm	% Espace entre les différents entrées d'une section
+\medskipamount=0.6cm		% Espace entre les sections
+\bigskipamount=1cm		% Espace entre le chapeau et l'objectif ou la
+
+
+
+%%%%%%%%%%% commande modernfont %%%%%%%%%%%
+\newcommand{\modernfont}{%
+\fontencoding{\encodingdefault}%
+\fontfamily{pag}%
+\fontseries{m}%
+\fontshape{n}%
+\selectfont}
+
+
+\begin{document}
+
+% Le CV commence ici
+%%%%%%%%%%%%%%%%%%%%
+
+% Chapeau (= informations personnelles)
+\begin{heading}
+ 	\Name{\textbf{Tangi COLIN}}
+	\Address{10, les Tonnelles, 38420 Le Versoud, France}
+	\Telephone{~06~**}
+	\Email{tangicolin@gmail.com} % Un lien
+                        %%hypertexte est automatiquement créé pour l'Email
+	\Nationality{Français}
+	\DateOfBirth{17 Octobre 1990}
+	\Age{}
+	\Gender{M}	% M = Masculin, F = Féminin. Est utilisé pour savoir s'il faut écrire Né ou Née par exemple ;-)
+	%\MaritalStatus{\underline{Statu} Célibataire}
+	\Mobility{\underline{Mobilité :} Permis B + véhicule}
+	%\Photo{}	% Vous pouvez choisir de mettre une photo ou pas.
+	% sa dimension est sans importance, au final sa hauteur est fixée à 3cm
+	% et son rapport hauteur/largeur est conserve.
+	% Meilleure est sa résolution, mieux c'est !
+\end{heading}
+
+% Objectif (optionnel)
+%\begin{objective}
+%\end{objective}
+	\begin{center}\modernfont\huge{Ingénieur en Systèmes
+embarqués Linux\newline}
+	\end{center}
+\begin{section}{\modernfont\Large{Expériences professionnelles:}}
+	\begin{entry}
+		\Date{10/2016 - 12/2016}
+		\Type{CDI}
+		\Place{BH-Technologies}
+		\Locality{38000 Grenoble}
+		\Country{FRANCE}
+		\Activity{\large{Développeur au sein de l'équipe firmware, mise en place d' une
+intégration continue avec tests automatisés sur cible}}
+	\end{entry}
+	\begin{entry}
+		\Date{07/2013 - 09/2016}
+		\Type{CDI}
+		\Place{Witekio}
+		\Locality{69130 Ecully}
+		\Country{FRANCE}
+		\Activity{\large{Réalisation de nombreux projets concernant le
+développement de drivers Linux et Android sur des plates-formes
+embarquées ARM cortex-A orientés multimédia tels que les
+architectures TI OMAP et NXP IMX6. Cela inclus entre autres le développement
+et bugfix de drivers camera,wifi, customisation de BSP Linux ou Android,
+optimisation du temps de boot, power management, secure boot, firmware upgrade et le développement d'un framework
+de test pour des BSP Linux/Android ...}
+\newline\newline
+\Huge{.}\large{ 04/2014 - 08/2015: Projet d'infrastructure
+d'intégration continue "as a Service" basée sur les technologies Mesos, Docker,
+Jenkins (jobDSL) et Gerrit pour le compte de Schneider. }
+ \newline\newline
+\Huge{.}\large{ 09/2015 - 03/2016: Expert Linux pour le projet de
+plates-formes embarquées du groupe Schneider}}
+	\end{entry}
+	\begin{entry}
+		\Date{02/2013 - 06/2013}
+		\Type{Stage de fin d'étude}
+		\Place{Witekio}
+		\Locality{69130 Ecully}
+		\Country{FRANCE}
+		\Activity{\large{Étude des différentes techniques de debugging,
+profiling et tracing du noyau linux.
+(tracepoint, kprobes, ftrace, perf, systemtap, lttng...)}}
+	\end{entry}
+	\begin{entry}
+		\Date{01/2012 - 07/2012}
+		\Type{Projet Industriel + CDD (1 mois)}
+		\Place{Trixell}
+		\Locality{38430 Moirans}
+		\Country{FRANCE}
+		\Activity{\large{Intégration de Web Service ReST et SOAP sur système
+embarqué Xilinx virtex 4}}
+	\end{entry}
+\end{section}
+
+
+\begin{section}{\modernfont\Large{Études et Diplômes:}}
+	\begin{entry}
+		\Date{2013}
+		\Type{}
+		\Activity{\large{Diplôme d'ingénieur en Électronique
+Informatique et Systèmes Embarqués}}
+		\Place{Grenoble INP École Supérieur d'Ingénieur en Systèmes Avancés et
+Réseaux}
+		\Locality{Valence}
+		\Country{FRANCE}
+	\end{entry}
+	\begin{entry}
+		\Date{2008}
+		\Type{}
+		\Place{Lycée Jules Algoud}
+		\Locality{Valence}
+		\Country{FRANCE}
+		\Activity{\large{BAC S  (spécialité science de l'ingénieur) avec
+mention}}
+	\end{entry}
+\end{section}
+
+\newpage
+\begin{section}{\modernfont\Large{Langues et Compétences maîtrisées:}}
+\singleEntry{\large{$\cdot$ Anglais (anglais technique parlé couramment)}}
+	\singleEntry{\large{$\cdot$ Langages informatiques : C,Shell/Bash, Python, Java/Groovy}}
+	\singleEntry{\large{$\cdot$ Protocoles réseaux : IPv4/IPv6, OSI,TCP,UDP, SSH, HTTP(Rest), LPWAN (Sigfox et Lora), COAP, BGP...}}
+  \singleEntry{\large{$\cdot$ Outils IT : Docker, Mesos, Ansible}}
+  \singleEntry{\large{$\cdot$ Outils debug noyau : Ftrace, Perf, LTTng, BPF}}
+  \singleEntry{\large{$\cdot$ Intégration continue : Jenkins, Gitlab Runners}}
+  \singleEntry{\large{$\cdot$ Système de contrôle de version  : Git, Gerrit, Gitlab, Bitbucket}}
+  \singleEntry{\large{$\cdot$ Outils de complitation : Yocto, Buildroot, Android.mk, Cmake}}
+  \singleEntry{\large{$\cdot$ Méthodologie de test : développement piloté par les tests (TDD), développement piloté par le comportement (BDD)}}
+  \singleEntry{\large{$\cdot$ Expertise en conception des
+architectures matérielles/logicielles des systèmes embarqués et en architecture micro-service}}
+  \singleEntry{\large{$\cdot$ Expertise en administration des systèmes linux}}
+  \singleEntry{\large{$\cdot$ Très bonne connaissance générale en informatique (pratique une veille technique journalière)}}
+  \singleEntry{\large{$\cdot$ Formé a la méthodologie Agile (Scrum)}}
+  \smallSkip
+\end{section}
+
+\end{document}
